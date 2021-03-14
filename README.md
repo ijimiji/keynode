@@ -6,4 +6,4 @@
 cd frontend && npm install && npm run dev
 ```
 # Demo
-![Alt text](demo.gif) / ![](demo.gif)
+![Alt text](demo.gif)
