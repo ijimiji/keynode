@@ -1,4 +1,4 @@
-<script>
+<script >
 import axios from 'axios';
 import {
     Card,
@@ -36,9 +36,7 @@ function removeUser(userID) {
 };
 
 onMount(async () => {
-    const res = await fetch("http://localhost:3000/api/users");
-    users = await res.json();
-    console.log(users);
+    getUsers();
 });
 </script>
 <h2>Users</h2>
@@ -53,9 +51,3 @@ onMount(async () => {
 </Card>
 {/each}
 </Col>
-
-<style>
-h2 {
-    text-align: center;
-}
-</style>

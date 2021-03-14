@@ -43,9 +43,3 @@ function register() {
         <Button on:click={register}>Register</Button>
     </div>
 </div>
-
-<style>
-h2 {
-    text-align: center;
-}
-</style>

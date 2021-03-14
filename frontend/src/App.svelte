@@ -1,9 +1,9 @@
 <script>
-	let menu = "login"
+	let menu = "404"
 	import Login from "./Login.svelte";
 	import Users from "./Users.svelte";
 	import { Switch, Icon, MaterialApp } from 'svelte-materialify';
-	import { mdiThemeLightDark, mdiHome, mdiAccount } from '@mdi/js';
+	import { mdiThemeLightDark, mdiHome, mdiAccount, mdiLogin } from '@mdi/js';
 import Register from "./Register.svelte";
 	let theme = 'light';
 	
@@ -25,15 +25,20 @@ import Register from "./Register.svelte";
 	<button on:click={() => menu = 'users'}>
 		<Icon path={mdiAccount} />
 	</button>
+	<button on:click={() => menu = 'login'}>
+		<Icon path={mdiLogin} />
+	</button>
 	</div>
 
 	{#if menu === 'register'}
 	<Register />
 	{:else if menu === 'users'}
 	<Users />
+	{:else if menu === 'login'}
+	<Login />
 	{:else}
-	<h1>
+	<h2>
 		Page Not Found
-	</h1>
+	</h2>
 	{/if}
 </MaterialApp>
