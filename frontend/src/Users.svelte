@@ -41,6 +41,7 @@ onMount(async () => {
 </script>
 <h2>Users</h2>
 
+<div id="header" style="width:20em;margin-left:auto;margin-right:auto;margin-top:10px;text-align:center">
 <Col>
 {#each users as user}
 <Card>
@@ -51,3 +52,4 @@ onMount(async () => {
 </Card>
 {/each}
 </Col>
+</div>

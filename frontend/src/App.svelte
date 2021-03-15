@@ -4,7 +4,7 @@
 	import Users from "./Users.svelte";
 	import { Switch, Icon, MaterialApp } from 'svelte-materialify';
 	import { mdiThemeLightDark, mdiHome, mdiAccount, mdiLogin } from '@mdi/js';
-import Register from "./Register.svelte";
+	import Register from "./Register.svelte";
 	let theme = 'light';
 	
 	function menuSet(option){
