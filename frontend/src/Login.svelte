@@ -51,12 +51,10 @@ onMount(async () => {
 
 <h2>Login</h2>
 
-<div id="header" style="width:864px;margin-top:10px">
-    <div id="centered" style="margin: 0 auto; width:855px;">
+<div id="header" style="width:20em;margin-left:auto;margin-right:auto;margin-top:10px;text-align:center">
         <TextField filled bind:value={loginForm.username}>Username</TextField>
         <TextField type='password' filled bind:value={loginForm.password}>Password</TextField>
         <Button on:click={login}>Sign in</Button>
-    </div>
 </div>
 <Snackbar class="justify-space-between" bind:active={snackbar} right top timeout={3000}>
     {token}

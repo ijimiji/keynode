@@ -36,10 +36,8 @@ function register() {
 
 <h2>Register</h2>
 
-<div id="header" style="width:864px;margin-top:10px">
-    <div id="centered" style="margin: 0 auto; width:855px;">
+<div id="header" style="width:20em;margin-left:auto;margin-right:auto;margin-top:10px;text-align:center">
         <TextField filled bind:value={regForm.username}>Username</TextField>
         <TextField type='password' filled bind:value={regForm.password}>Password</TextField>
         <Button on:click={register}>Register</Button>
-    </div>
 </div>

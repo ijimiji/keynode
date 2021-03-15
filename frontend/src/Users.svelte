@@ -41,13 +41,17 @@ onMount(async () => {
 </script>
 <h2>Users</h2>
 
+<div id="header" style="width:20em;margin-left:auto;margin-right:auto;margin-top:10px;text-align:center">
 <Col>
 {#each users as user}
+<div style="margin-top:8px;">
 <Card>
     <CardTitle>{user.username}</CardTitle>
     <CardActions>
         <Button on:click={removeUser({user})} >Remove</Button>
     </CardActions>
 </Card>
+</div>
 {/each}
 </Col>
+</div>
