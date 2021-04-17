@@ -10,13 +10,15 @@ export default class UserController {
         const username = req.body.username;
         const cpm = req.body.cpm;
         if (req.user.username == username) {
-            const user = await this.repository.findOne({username})
+            const user = await this.repository.findOne({ username })
             const newCpm: number = (parseInt(cpm) + parseInt(user.cpm)) / 2;
+            // Rount result because float cpm is not natural
+            const newResults: string = user.results + " " + cpm;
             try {
-                await this.repository.update({ username: username }, { cpm: newCpm })
-                res.send({status: "Ok"})
-            } catch (e){
-                res.send({status: "Error"})
+                await this.repository.update({ username: username }, { cpm: newCpm, results: newResults })
+                res.send({ status: "Ok" })
+            } catch (e) {
+                res.send({ status: "Error" })
             }
         }
     }

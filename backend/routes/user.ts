@@ -1,4 +1,4 @@
-import {getAll, post, update, updateCPM} from '../controllers/user'
+import {updateCPM} from '../controllers/user'
 import authMiddleware from '../middleware/auth'
 import express from 'express';
 

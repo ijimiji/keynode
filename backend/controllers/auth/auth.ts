@@ -19,17 +19,22 @@ export default class AuthConroller {
         this.generateToken = generateToken;
     }
     login = async (req: any, res: any) => {
-        const { username, password } = req.body
-        const user = await this.repository.findOne({ username })
-        if (!user) {
-            return res.status(400).json({ message: `User ${username} not found` })
+        try {
+            const { username, password } = req.body
+            const user = await this.repository.findOne({ username })
+            if (!user) {
+                return res.status(400).json({ message: `User ${username} not found` })
+            }
+            const isValidPassword = this.compare(password, user.password)
+            if (!isValidPassword) {
+                return res.status(400).json({ message: `Wrong password` })
+            }
+            const token = this.generateToken(user.username)
+            res.json({ token: token })
         }
-        const isValidPassword = this.compare(password, user.password)
-        if (!isValidPassword) {
-            return res.status(400).json({ message: `Wrong password` })
+        catch (e) {
+            return res.status(400).json({ message: `Not found` })
         }
-        const token = this.generateToken(user.username)
-        res.json({token: token})
     }
     register = async (req: any, res: any) => {
         const errors = this.validator(req);

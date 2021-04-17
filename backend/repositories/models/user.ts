@@ -10,6 +10,10 @@ const UserSchema = new mongoose.Schema({
     cpm: {
         type: Number,
         default: 0
+    },
+    results: {
+        type: String,
+        default: "0"
     }
 })
 const model = mongoose.model('User', UserSchema);
