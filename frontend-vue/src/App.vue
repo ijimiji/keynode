@@ -1,17 +1,18 @@
 <template>
-<v-app>
+  <v-app>
     <Bar />
     <v-main>
-        <router-view />
+      <p>Hello!</p>
+      <router-view />
     </v-main>
-</v-app>
+  </v-app>
 </template>
 
 <script>
-import Bar from './components/Bar'
+import Bar from "./components/Bar";
 export default {
-    components: {
-        Bar
-    }
-}
+  components: {
+    Bar,
+  },
+};
 </script>

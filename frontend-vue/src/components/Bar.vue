@@ -1,5 +1,5 @@
 <template>
-<v-card class="mx-auto overflow-hidden">
+<v-card>
     <v-app-bar dark short app>
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
         <v-toolbar-title>Keynode!</v-toolbar-title>
@@ -25,24 +25,12 @@
 </template>
 
 <script>
+import {routes} from '../config'
 export default {
     name: "Bar",
     data: () => ({
         drawer: false,
-        items: [{
-                route: '/users',
-                text: 'Users',
-                icon: 'mdi-clock'
-            },
-            {
-                route: '/',
-                text: 'Home',
-                icon: 'mdi-clock'
-            }
-        ],
+        items: routes,
     }),
 }
 </script>
-
-<style>
-</style>
