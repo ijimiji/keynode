@@ -9,3 +9,8 @@
 - [ ] Handle token
 - [ ] Personal page
 - [ ] Game component
+# Deployment
+- [ ] Wrap everything in docker
+- [ ] Write docker compose file
+- [ ] Create root project which unites back and front
+- [ ] Setup nginx server for hosting
