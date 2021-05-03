@@ -11,8 +11,8 @@ function createRoute(path, name, icon = 'mdi-timer', component = name) {
 const routes = [
     createRoute('/', 'Home', 'mdi-home'),
     createRoute('/register', 'Register', 'mdi-account-plus'),
+    createRoute('/login', 'Login', 'mdi-login'),
     createRoute('/users', 'Users'),
-    createRoute('/login', 'Login'),
 ]
 
 export {
