@@ -12,6 +12,7 @@ const routes = [
     createRoute('/', 'Home', 'mdi-home'),
     createRoute('/register', 'Register', 'mdi-account-plus'),
     createRoute('/users', 'Users'),
+    createRoute('/login', 'Login'),
 ]
 
 export {

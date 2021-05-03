@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>User</p>
+    <p>Login</p>
   </div>
 </template>
 
@@ -10,7 +10,6 @@ export default {
   name: "Users",
   mixins: [apiConsumer],
   created(){
-    this.get()
   }
 };
 </script>
