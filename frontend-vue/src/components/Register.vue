@@ -31,7 +31,7 @@
           <v-checkbox
             v-model="checkbox"
             :rules="[(v) => !!v || 'You must agree to continue!']"
-            label="Do you agree?"
+            label="Do you accept our privacy policy?"
             required
           ></v-checkbox>
 
@@ -48,7 +48,7 @@
 
         </v-form>
         <v-snackbar v-model="snackbar" :timeout="2000">
-          Succesful registration!
+          {{snackbar_text}}
           <template v-slot:action="{ attrs }">
             <v-btn color="blue" text v-bind="attrs" @click="snackbar = false">
               Close
@@ -131,6 +131,8 @@ export default {
     ],
     checkbox: false,
     snackbar: false,
+    snackbar_text: "Succesfull registration"
+
   }),
 
   methods: {
@@ -141,6 +143,11 @@ export default {
           password: this.password,
         });
         this.reset();
+        if (this.response === "Ok"){
+          this.snackbar_text = "Succesfull registration!"
+        } else {
+          this.snackbar_text = "Registration error"
+        }
         this.snackbar = true;
       }
     },
