@@ -41,14 +41,11 @@
             class="mr-4"
             @click="validate"
           >
-            Validate
+            Register
           </v-btn>
 
           <v-btn color="error" class="mr-4" @click="reset"> Reset Form </v-btn>
 
-          <v-btn color="warning" @click="resetValidation">
-            Reset Validation
-          </v-btn>
         </v-form>
         <v-snackbar v-model="snackbar" :timeout="2000">
           Succesful registration!
