@@ -1,5 +1,5 @@
 <template>
-  <v-container style="width: 40%" fill-height fluid>
+  <v-container style="width: 30%" fill-height fluid>
     <v-row align="center" justify="center">
       <v-col align="center">
         <h1>Login</h1>
@@ -33,7 +33,7 @@
 
         </v-form>
         <v-snackbar v-model="snackbar" :timeout="2000">
-          Succesful Login!
+          {{snackbar_text}}
           <template v-slot:action="{ attrs }">
             <v-btn color="blue" text v-bind="attrs" @click="snackbar = false">
               Close
@@ -62,6 +62,7 @@ export default {
       (v) => /.{8,}$/.test(v) || "Password is too weak!",
     ],
     snackbar: false,
+    snackbar_text: "Succesfull login!",
   }),
 
   methods: {
@@ -72,6 +73,11 @@ export default {
           password: this.password,
         });
         this.reset();
+        if (this.response === "Ok"){
+          this.snackbar_text = "Succesfull login!"
+        } else {
+          this.snackbar_text = "Login error!"
+        }
         this.snackbar = true;
       }
     },
