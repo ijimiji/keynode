@@ -61,7 +61,7 @@
 </template>
 
 <script>
-import apiConsumer from "./apiConsumer";
+import apiConsumer from "../mixins/apiConsumer";
 export default {
   mixins: [apiConsumer],
   data: () => ({
