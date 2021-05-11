@@ -160,3 +160,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+  .v-application container{
+    background-color: aqua;
+  }
+</style>
