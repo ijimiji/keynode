@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { routes } from "../config";
+import { routes } from "../routes";
 export default {
   name: "Bar",
   data() {

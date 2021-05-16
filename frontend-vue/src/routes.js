@@ -13,6 +13,7 @@ const routes = [
     createRoute('/register', 'Register', 'mdi-account-plus'),
     createRoute('/login', 'Login', 'mdi-login'),
     createRoute('/me', 'Personal', 'mdi-account-details'),
+    createRoute('/play', 'Play', 'mdi-gamepad-square-outline'),
 ]
 
 export {

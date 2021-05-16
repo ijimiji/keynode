@@ -61,7 +61,7 @@
 </template>
 
 <script>
-import apiConsumer from "./apiConsumer";
+import apiConsumer from "../mixins/apiConsumer";
 export default {
   mixins: [apiConsumer],
   data: () => ({
@@ -160,8 +160,3 @@ export default {
   },
 };
 </script>
-<style scoped>
-  .v-application container{
-    background-color: aqua;
-  }
-</style>

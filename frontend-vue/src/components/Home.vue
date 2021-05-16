@@ -4,7 +4,13 @@
             <div class="container">
                 <div class="content">
                     <h1>Welcome to KeyNode!</h1>
-                    <p><a href="./Register">Register</a><br><br><br><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO">Play Game</a><br><br><br><a href="./Login">Login</a><br><br><br><a href="./User">Users</a><br><br><br><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO">Bulatov Mode</a><br><br><br></p> <!--здесь сделаю нормальные кнопки-->
+                    <p><router-link to="./Register">Register</router-link><br><br><br>
+                        
+                        <router-link to="./Play">Play Game</router-link><br><br><br>
+                        <router-link to="./Login">Login</router-link><br><br><br>
+                        <router-link to="./User">Users</router-link><br><br><br>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO">Bulatov Mode</a><br><br><br>
+                    </p> 
                 </div>
             </div>
             <canvas class="webgl"></canvas>
@@ -50,7 +56,7 @@ export default {
         const knot_geo = new THREE.TorusKnotGeometry( 5, 3, 50, 5 );
         const knot_geo_1 = new THREE.TorusKnotGeometry( 7, 5, 30, 10 );
         const sph_geometry = new THREE.SphereGeometry( 3, 10, 10 )
-        const sph_geometry_1 = new THREE.SphereGeometry( 3, 10, 50 )
+        const sph_geometry_1 = new THREE.SphereGeometry( 5, 50, 50 )
 
 
 
@@ -123,7 +129,7 @@ export default {
             //axes: axes,
             thorus_speed: 0.01,
             sphere_speed: 0.001,
-            sphere_speed_1: 0.5
+            sphere_speed_1: 0.01
         }
     },
     created: function() {
@@ -212,7 +218,7 @@ export default {
     width: 80vw;
     line-height: 97%;
     text-align: left;
-    color: #07f2fa;
+    color: #2ad1c9;
     border-bottom: 2px solid rgb(38, 236, 197) ;
     
 
@@ -222,7 +228,7 @@ export default {
     text-align: right;
 }
 .v-application a {
-    color: #07f2fa;
+    color: #2ad1c9;
     text-decoration: none;
     font: 12pt cursive;
     font-size: 3rem;
