@@ -58,17 +58,9 @@ export default {
         const sph_geometry = new THREE.SphereGeometry( 3, 10, 10 )
         const sph_geometry_1 = new THREE.SphereGeometry( 5, 50, 50 )
 
-
-
-
-
-
-
-
-
         const material = new THREE.PointsMaterial({
             size: 0.008,
-            color: '#FFC0CB'
+            color: '#000000'
         })
         const sph_material = new THREE.PointsMaterial({
             map: loader.load('./Derevyago.png'),
@@ -95,15 +87,6 @@ export default {
             size: 0.05,
             transparent: true
         })
-
-
-
-
-
-
-
-
-
 
         const knot_thorus = new THREE.Points(knot_geo, knot_material)
         const knot_thorus_1 = new THREE.Points(knot_geo, knot_material_1)
@@ -147,7 +130,7 @@ export default {
         this.camera.position.z = 2
         this.camera.position.x = 0.2
         this.camera.position.y = 0.2
-        this.scene.background = new THREE.Color('hsl(0, 0%, 10%)')
+        this.scene.background = new THREE.Color('hsl(100%, 100%, 100%)')
         // this.controls = new TrackballControls(this.camera)
         // this.controls.rotateSpeed = 1.0
         // this.controls.zoomSpeed = 5
@@ -172,7 +155,7 @@ export default {
             this.knot_thorus.rotation.y += this.sphere_speed
             this.knot_thorus_1.rotation.x += this.sphere_speed
             this.knot_thorus_2.rotation.z += this.sphere_speed
-            this.controls.update()
+            //this.controls.update()
         }
     },
     computed: {
@@ -217,20 +200,20 @@ export default {
     font-size: 5rem;
     width: 80vw;
     line-height: 97%;
-    text-align: left;
-    color: #2ad1c9;
-    border-bottom: 2px solid rgb(38, 236, 197) ;
-    
-
+    text-align: center;
+    color: #000000;
+    border-bottom: 2px solid;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
 }
 
 .v-application p{
     text-align: right;
 }
 .v-application a {
-    color: #2ad1c9;
+    /* color: #2ad1c9; */
     text-decoration: none;
     font: 12pt cursive;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
     font-size: 3rem;
     width: 50vw;
     line-height: 97%;
