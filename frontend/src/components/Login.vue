@@ -33,7 +33,7 @@
 
         </v-form>
         <v-snackbar v-model="snackbar" :timeout="2000">
-          {{snackbar_text}}
+          {{message}}
           <template v-slot:action="{ attrs }">
             <v-btn color="blue" text v-bind="attrs" @click="snackbar = false">
               Close
@@ -62,7 +62,6 @@ export default {
       (v) => /.{8,}$/.test(v) || "Password is too weak!",
     ],
     snackbar: false,
-    snackbar_text: "Succesfull login!",
   }),
 
   methods: {
@@ -73,11 +72,6 @@ export default {
           password: this.password,
         });
         this.reset();
-        if (this.response === "Ok"){
-          this.snackbar_text = "Succesfull login!"
-        } else {
-          this.snackbar_text = "Login error!"
-        }
         this.snackbar = true;
       }
     },

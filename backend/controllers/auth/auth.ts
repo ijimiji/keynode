@@ -41,6 +41,11 @@ export default class AuthConroller {
         if (!errors.isEmpty()) {
             return res.status(400).json(errors)
         }
+        const username =  req.body.username;
+        const userFound = await this.repository.findOne({username});
+        if (userFound) {
+            return res.status(400).json({ message: `User is already registered` })
+        }
         const password = this.hash(req.body.password)
         const user = new User(req.body.username, password)
         try {

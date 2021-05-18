@@ -2,7 +2,8 @@ const apiConsumer = {
     data() {
         return {
             response: {},
-            errors: []
+            data: {},
+            message: ""
         }
     },
     methods: {
@@ -11,9 +12,13 @@ const apiConsumer = {
         },
         post(url, payload, hook = () => { }) {
             this.axios.post(url, payload)
-                .then(response => { this.response = "Ok" })
+                .then(response => { 
+                    this.response = "Ok";
+                    this.data = response.data;
+                    this.message = "Success";
+                })
                 .catch(e => {
-                    this.errors.push(e)
+                    this.message = e.response.data.message;
                 })
             hook()
         }
