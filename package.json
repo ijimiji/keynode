@@ -1,0 +1,21 @@
+{
+  "name": "keynode",
+  "version": "0.0.1",
+  "description": "Typing game",
+  "scripts": {
+    "deploy": "npm install --prefix ./backend && npm run dev --prefix ./backend & npm install --prefix ./frontend && npm run dev --prefix ./frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ijimiji/keynode.git"
+  },
+  "keywords": [
+    "Game"
+  ],
+  "author": "Jahor, Yakov, Polina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ijimiji/keynode/issues"
+  },
+  "homepage": "https://github.com/ijimiji/keynode#readme"
+}
