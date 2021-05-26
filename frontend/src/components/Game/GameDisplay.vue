@@ -42,10 +42,13 @@
 
 <style scoped lang="scss">
     .gameDisplay {
-        width: 600px;
-        height: 400px;
+        width:50%;
+        height: 50%;
         //border: 1px solid #CCC;
-        margin: auto;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        
         position: relative;
     }
 
@@ -53,7 +56,7 @@
         animation: damage;
         animation-duration: .2s;
     }
-
+   
     @keyframes damage {
         0% {
             background : rgb(255, 0, 0);

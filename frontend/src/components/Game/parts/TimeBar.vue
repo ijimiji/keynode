@@ -85,6 +85,6 @@
         color: #aaaaaa;
         opacity: 0.7;
         overflow: hidden;
-
+        
     }
 </style>
