@@ -174,6 +174,7 @@ export default {
 <style scoped>
 .webgl
 {
+    color: #000000;
     position: fixed;
     top: 0;
     left: 0;
@@ -184,6 +185,7 @@ export default {
 }
 
 .container{
+    color: #000000;
     position: absolute;
     z-index: 1;
     width: 100%;
@@ -210,7 +212,7 @@ export default {
     text-align: right;
 }
 .v-application a {
-    /* color: #2ad1c9; */
+    color: black; /* color: #2ad1c9;  */
     text-decoration: none;
     font: 12pt cursive;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
